@@ -24,11 +24,6 @@ variable "spaces_secret_access_key" {
 
 # You can also set SENDGRID_API_KEY env variable
 # Set the variable value in *.tfvars file or use the -var="sendgrid_api=..." CLI option
-variable "sendgrid_api" {
-  description = "SendGrid API Key."
-  type        = string
-  sensitive   = true
-}
 
 # # You can also set TF_TOKEN_app_terraform_io
 # # Set the variable value in *.tfvars file or use the -var="_=..." CLI option
@@ -184,6 +179,13 @@ variable "smtp_user" {
   description = "The username to use for mail server requires authentication"
   type        = string
   default     = "apikey"
+}
+
+variable "smtp_pass" {
+  description = "The password to use for mail server requires authentication"
+  type        = string
+  sensitive   = true
+  default     = ""
 }
 
 variable "smtp_sender_name" {

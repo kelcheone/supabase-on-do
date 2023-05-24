@@ -22,10 +22,9 @@ terraform {
       source  = "loafoe/htpasswd"
       version = "1.0.4"
     }
-    sendgrid = {
-      source  = "taharah/sendgrid"
-      version = "0.2.0"
-    }
+
+
+
     time = {
       source  = "hashicorp/time"
       version = "0.9.1"
@@ -39,9 +38,8 @@ provider "digitalocean" {
   spaces_secret_key = var.spaces_secret_access_key
 }
 
-provider "sendgrid" {
-  api_key = var.sendgrid_api
-}
+
+
 
 ############
 # Choose between local or cloud state storage

@@ -10,11 +10,7 @@ output "htpasswd" {
   sensitive   = true
 }
 
-output "sendgrid_generated_api" {
-  description = "SendGrid API key to allow sending of emails (The api key is limited to Send Mail scope only)."
-  value       = sendgrid_api_key.this.api_key
-  sensitive   = true
-}
+
 
 output "jwt" {
   description = "Randomly generated 40 character jwt secret."

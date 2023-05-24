@@ -126,7 +126,7 @@ locals {
       TF_SMTP_HOST                = "${var.smtp_host}",
       TF_SMTP_PORT                = "${var.smtp_port}",
       TF_SMTP_USER                = "${var.smtp_user}",
-      TF_SMTP_PASS                = "${sendgrid_api_key.this.api_key}",
+      TF_SMTP_PASS                = "${var.smtp_pass}",
       TF_SMTP_SENDER_NAME         = "${local.smtp_sender_name}",
       TF_DEFAULT_ORGANIZATION     = "${var.studio_org}",
       TF_DEFAULT_PROJECT          = "${var.studio_project}",
